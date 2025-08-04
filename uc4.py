@@ -2,9 +2,9 @@ class AddressBook:
     def __init__(self):
         self.contacts = []
 
-    def edit_contact(self, first_name, updated_contact):
+    def delete_contact(self, first_name):
         for i, c in enumerate(self.contacts):
             if c.first_name.lower() == first_name.lower():
-                self.contacts[i] = updated_contact
+                del self.contacts[i]
                 return True
         return False
