@@ -1,5 +1,5 @@
-from uc2 import AddressBook
 
+from uc2 import AddressBook
 
 class AddressBookSystem:
     def __init__(self):
@@ -10,3 +10,6 @@ class AddressBookSystem:
             self.books[name] = AddressBook()
             return True
         return False
+
+    def get_book(self, name):
+        return self.books.get(name)
